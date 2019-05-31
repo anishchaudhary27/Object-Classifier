@@ -15,20 +15,7 @@ function setup(){
   extractor = ml5.featureExtractor('MobileNet',modelReady);
   classifier =extractor.classification(vid,vidReady);
 
-  but = createButton('add object1');
-  but.mousePressed(function(){
-    classifier.addImage('object1');
-  });
-
-  but2 = createButton('add object2');
-  but2.mousePressed(function(){
-    classifier.addImage('object2');
-  });
-
-  trains = createButton('train');
-  trains.mousePressed(function(){
-    classifier.train(whileTraining);
-  });
+  
 
   
 }
@@ -49,7 +36,20 @@ function vidReady(){
 
 function modelReady(){
   console.log('model ready to clasify!!');
-  
+  but = createButton('add object1');
+  but.mousePressed(function(){
+    classifier.addImage('object1');
+  });
+
+  but2 = createButton('add object2');
+  but2.mousePressed(function(){
+    classifier.addImage('object2');
+  });
+
+  trains = createButton('train');
+  trains.mousePressed(function(){
+    classifier.train(whileTraining);
+  });
 }
 
 
