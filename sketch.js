@@ -1,6 +1,6 @@
 let classifier;
 let vid;
-let labels='nothing';
+let labels='Need to be trained';
 let extractor;
 let but;
 let but2;
