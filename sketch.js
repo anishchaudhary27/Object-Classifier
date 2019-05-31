@@ -15,7 +15,7 @@ function setup(){
   extractor = ml5.featureExtractor('MobileNet',modelReady);
   classifier =extractor.classification(vid,vidReady);
 
-  but = createButton('add object2');
+  but = createButton('add object1');
   but.mousePressed(function(){
     classifier.addImage('object1');
   });
